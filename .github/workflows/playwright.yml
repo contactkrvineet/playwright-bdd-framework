@@ -159,6 +159,16 @@ jobs:
                 opacity: 0.9;
               }
               .icon { font-size: 2. 5em; margin-bottom: 15px; }
+              .footer {
+                text-align: center;
+                color: white;
+                margin-top: 40px;
+                font-size: 0.9em;
+              }
+              .footer .author {
+                font-weight: 600;
+                color: #ffd700;
+              }
             </style>
           </head>
           <body>
@@ -187,6 +197,10 @@ jobs:
                   <p>Comprehensive test analytics with trends, categories, graphs, and detailed insights.</p>
                   <a href="allure/index.html">View Analytics →</a>
                 </div>
+              </div>
+
+              <div class="footer">
+                <p>Authored by <span class="author">Vineet Kumar</span></p>
               </div>
             </div>
           </body>
