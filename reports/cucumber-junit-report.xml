@@ -1,11 +1,93 @@
 <?xml version="1.0"?>
-<testsuite name="Cucumber" time="1.54" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-25T15:51:09.664Z">
-  <testcase classname="Sample BDD Test with Playwright" name="Verify vineet website title" time="0.68">
+<testsuite name="Cucumber" time="3.485" tests="15" skipped="0" failures="0" errors="0" timestamp="2025-12-25T17:26:48.739Z">
+  <testcase classname="API Testing with Playwright" name="Get all users" time="0.348">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users".......................................passed
+Then the response status code should be 200.................................passed
+And the response should be a JSON array.....................................passed
+And the response array should have 10 items.................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Get a specific user by ID" time="0.075">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/1".....................................passed
+Then the response status code should be 200.................................passed
+And the response should contain the following fields:.......................passed
+And the response field "id" should be 1.....................................passed
+And the response field "name" should be "Leanne Graham".....................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Create a new user" time="0.097">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a POST request to "/users" with body:...........................passed
+Then the response status code should be 201.................................passed
+And the response field "name" should be "John Doe"..........................passed
+And the response field "username" should be "johndoe".......................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Update an existing user" time="0.147">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a PUT request to "/users/1" with body:..........................passed
+Then the response status code should be 200.................................passed
+And the response field "name" should be "Updated Name"......................passed
+And the response field "username" should be "updateduser"...................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Partially update a user" time="0.093">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a PATCH request to "/users/1" with body:........................passed
+Then the response status code should be 200.................................passed
+And the response field "email" should be "newemail@example.com".............passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Delete a user" time="0.091">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a DELETE request to "/users/1"..................................passed
+Then the response status code should be 200.................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Get all posts for a user" time="0.167">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/1/posts"...............................passed
+Then the response status code should be 200.................................passed
+And the response should be a JSON array.....................................passed
+And all items should have field "userId" with value 1.......................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Verify response time" time="0.071">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users".......................................passed
+Then the response status code should be 200.................................passed
+And the response time should be less than 2000 milliseconds.................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Verify response headers" time="0.075">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/1".....................................passed
+Then the response status code should be 200.................................passed
+And the response header "content-type" should contain "application/json"....passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Get non-existent user" time="0.071">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/9999"..................................passed
+Then the response status code should be 404.................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Get multiple users by ID - #1.1" time="0.07">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/1".....................................passed
+Then the response status code should be 200.................................passed
+And the response field "id" should be 1.....................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Get multiple users by ID - #1.2" time="0.077">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/2".....................................passed
+Then the response status code should be 200.................................passed
+And the response field "id" should be 2.....................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API Testing with Playwright" name="Get multiple users by ID - #1.3" time="0.067">
+    <system-out><![CDATA[Given the API base URL is "https://jsonplaceholder.typicode.com"............passed
+When I send a GET request to "/users/3".....................................passed
+Then the response status code should be 200.................................passed
+And the response field "id" should be 3.....................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Sample BDD Test with Playwright" name="Verify vineet website title" time="0.768">
     <system-out><![CDATA[Given I navigate to "https://www.vineetkr.com"..............................passed
 When I wait for the page to load............................................passed
 Then the page title should contain "Technology Portfolio"...................passed]]></system-out>
   </testcase>
-  <testcase classname="Sample BDD Test with Playwright" name="Verify vineet website   link" time="0.706">
+  <testcase classname="Sample BDD Test with Playwright" name="Verify vineet website   link" time="0.747">
     <system-out><![CDATA[Given I navigate to "https://www.vineetkr.com"..............................passed
 When I click on the "About Me" link.........................................passed
 Then I should see the documentation page....................................passed

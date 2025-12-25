@@ -1,5 +1,1257 @@
 [
   {
+    "description": "  As a QA Engineer\n  I want to test REST API endpoints\n  So that I can validate backend functionality",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-all-users",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Get all users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 233066500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16833750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I send a GET request to \"/users\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82622708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 892709
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the response should be a JSON array",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 579124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the response array should have 10 items",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363124
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12646458
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 9
+          },
+          {
+            "name": "@api",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-a-specific-user-by-id",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Get a specific user by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 49604833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 639249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I send a GET request to \"/users/1\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20065000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224375
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "field"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "id"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "name"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "username"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "email"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should contain the following fields:",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 901957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the response field \"id\" should be 1",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 285457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the response field \"name\" should be \"Leanne Graham\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 375250
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1972333
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 16
+          },
+          {
+            "name": "@api",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;create-a-new-user",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Create a new user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52362207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 488125
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"John Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"john.doe@example.com\"\n}",
+                "line": 32
+              }
+            ],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I send a POST request to \"/users\" with body:",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39728333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 209124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response field \"name\" should be \"John Doe\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 788542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response field \"username\" should be \"johndoe\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271541
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2374624
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 29
+          },
+          {
+            "name": "@api",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;update-an-existing-user",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Update an existing user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55243416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 649750
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"id\": 1,\n  \"name\": \"Updated Name\",\n  \"username\": \"updateduser\",\n  \"email\": \"updated@example.com\"\n}",
+                "line": 46
+              }
+            ],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I send a PUT request to \"/users/1\" with body:",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87460583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "the response field \"name\" should be \"Updated Name\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 291167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "the response field \"username\" should be \"updateduser\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288625
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2049917
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 43
+          },
+          {
+            "name": "@api",
+            "line": 43
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;partially-update-a-user",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "Partially update a user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52267417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 555792
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"email\": \"newemail@example.com\"\n}",
+                "line": 61
+              }
+            ],
+            "keyword": "When ",
+            "line": 60,
+            "name": "I send a PATCH request to \"/users/1\" with body:",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36967415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "the response field \"email\" should be \"newemail@example.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314875
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1998665
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 58
+          },
+          {
+            "name": "@api",
+            "line": 58
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;delete-a-user",
+        "keyword": "Scenario",
+        "line": 70,
+        "name": "Delete a user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52601000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 708916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 71,
+            "name": "I send a DELETE request to \"/users/1\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35243250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 72,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 148375
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1867083
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 69
+          },
+          {
+            "name": "@api",
+            "line": 69
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-all-posts-for-a-user",
+        "keyword": "Scenario",
+        "line": 75,
+        "name": "Get all posts for a user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54242959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 556250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "I send a GET request to \"/users/1/posts\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108153249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 78,
+            "name": "the response should be a JSON array",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 321666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 79,
+            "name": "all items should have field \"userId\" with value 1",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1039249
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2118167
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 74
+          },
+          {
+            "name": "@api",
+            "line": 74
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;verify-response-time",
+        "keyword": "Scenario",
+        "line": 82,
+        "name": "Verify response time",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52795791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 569375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 83,
+            "name": "I send a GET request to \"/users\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14582457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 84,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "the response time should be less than 2000 milliseconds",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1857290
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 81
+          },
+          {
+            "name": "@api",
+            "line": 81
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;verify-response-headers",
+        "keyword": "Scenario",
+        "line": 88,
+        "name": "Verify response headers",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52538541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 679750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 89,
+            "name": "I send a GET request to \"/users/1\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17785084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 194749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "the response header \"content-type\" should contain \"application/json\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 344875
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2096000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 87
+          },
+          {
+            "name": "@api",
+            "line": 87
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-non-existent-user",
+        "keyword": "Scenario",
+        "line": 94,
+        "name": "Get non-existent user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 51153249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 535582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 95,
+            "name": "I send a GET request to \"/users/9999\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16885167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 96,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143125
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1861958
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 93
+          },
+          {
+            "name": "@api",
+            "line": 93
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-multiple-users-by-id",
+        "keyword": "Scenario Outline",
+        "line": 106,
+        "name": "Get multiple users by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50502625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 483416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "I send a GET request to \"/users/1\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16217249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 102,
+            "name": "the response field \"id\" should be 1",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 499083
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1992250
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 98
+          },
+          {
+            "name": "@api",
+            "line": 98
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-multiple-users-by-id",
+        "keyword": "Scenario Outline",
+        "line": 107,
+        "name": "Get multiple users by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50778208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 597249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "I send a GET request to \"/users/2\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22237250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 102,
+            "name": "the response field \"id\" should be 2",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2067125
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 98
+          },
+          {
+            "name": "@api",
+            "line": 98
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "api-testing-with-playwright;get-multiple-users-by-id",
+        "keyword": "Scenario Outline",
+        "line": 108,
+        "name": "Get multiple users by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 49662290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API base URL is \"https://jsonplaceholder.typicode.com\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 685458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "I send a GET request to \"/users/3\"",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13743292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 227000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 102,
+            "name": "the response field \"id\" should be 3",
+            "match": {
+              "location": "features/step_definitions/api.steps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 324042
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1566582
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 98
+          },
+          {
+            "name": "@api",
+            "line": 98
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-testing-with-playwright",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "API Testing with Playwright",
+    "tags": [],
+    "uri": "features/api.feature"
+  },
+  {
     "description": "",
     "elements": [
       {
@@ -14,7 +1266,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 67775500
+              "duration": 51544625
             }
           },
           {
@@ -27,7 +1279,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 99920332
+              "duration": 244948957
             }
           },
           {
@@ -40,7 +1292,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 501031625
+              "duration": 459162667
             }
           },
           {
@@ -53,7 +1305,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5316749
+              "duration": 9575125
             }
           },
           {
@@ -61,7 +1313,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3747791
+              "duration": 1998708
             }
           }
         ],
@@ -89,7 +1341,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50828542
+              "duration": 52868124
             }
           },
           {
@@ -102,7 +1354,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75536624
+              "duration": 68994708
             }
           },
           {
@@ -115,7 +1367,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 71132375
+              "duration": 120591291
             }
           },
           {
@@ -128,7 +1380,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 502746417
+              "duration": 501328083
             }
           },
           {
@@ -141,7 +1393,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 874042
+              "duration": 194833
             }
           },
           {
@@ -149,7 +1401,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2589707
+              "duration": 2406375
             }
           }
         ],

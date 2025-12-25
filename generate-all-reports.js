@@ -136,6 +136,25 @@ function generateReportIndex() {
             margin-top: 40px;
             opacity: 0.8;
         }
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        .footer .author {
+            font-weight: 600;
+            color: #ffd700;
+        }
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+            border-bottom: 1px solid #ffd700;
+            transition: opacity 0.3s ease;
+        }
+        .footer a:hover {
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -165,6 +184,10 @@ function generateReportIndex() {
         </div>
         <div class="timestamp">
             <p>Generated on: ${new Date().toLocaleString()}</p>
+        </div>
+        <div class="footer">
+            <p>Maintained by <span class="author">Vineet Kumar</span></p>
+            <p><a href="https://github.com/contactkrvineet/playwright-bdd-framework" target="_blank">🔗 View on GitHub</a></p>
         </div>
     </div>
 </body>
