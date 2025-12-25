@@ -102,20 +102,87 @@ cd playwright-bdd-framework
 
 **Step 2: Install Dependencies**
 
+This framework requires Playwright and Cucumber packages. All dependencies are listed in `package.json`.
+
 ```bash
 npm install
 ```
 
+This will install:
+
+**Playwright:**
+
+- `@playwright/test` - Playwright test runner and library (v1.57.0+)
+
+**Cucumber (BDD):**
+
+- `@cucumber/cucumber` - Core Cucumber framework for BDD (v12.4.0+)
+- `@cucumber/pretty-formatter` - Enhanced console output formatting
+
+**Reporting & Utilities:**
+
+- `allure-cucumberjs` - Allure reporting integration for Cucumber
+- `allure-playwright` - Allure reporting integration for Playwright
+- `cucumber-html-reporter` - Generate HTML reports from Cucumber JSON
+- `multiple-cucumber-html-reporter` - Advanced multi-browser HTML reporting
+
 **Step 3: Install Playwright Browsers**
+
+After installing dependencies, download the browser binaries:
 
 ```bash
 npx playwright install --with-deps
 ```
 
-**Step 4: Verify Installation**
+This command:
+
+- Downloads Chromium, Firefox, and WebKit browsers
+- Installs system dependencies (on Linux)
+- Takes ~300MB of disk space
+
+For specific browsers only:
 
 ```bash
+npx playwright install chromium    # Chrome/Edge only
+npx playwright install firefox     # Firefox only
+npx playwright install webkit      # Safari only
+```
+
+**Step 4: (Optional) Install Allure CLI**
+
+For Allure report generation:
+
+**macOS:**
+
+```bash
+brew install allure
+```
+
+**Linux:**
+
+```bash
+sudo apt-get install allure
+```
+
+**Windows:**
+
+```bash
+scoop install allure
+```
+
+**Step 5: Verify Installation**
+
+Test that everything is set up correctly:
+
+```bash
+# Verify Playwright installation
+npx playwright --version
+
+# Verify Cucumber installation (dry-run)
 npm run test:bdd -- --dry-run
+
+# Run a quick smoke test
+npm run test:smoke
 ```
 
 ---
