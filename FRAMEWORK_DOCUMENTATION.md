@@ -68,12 +68,12 @@ Feature: User Login
 
 Access the complete framework on GitLab:
 
-**Repository:** [Playwright-BDD-Framework](https://gitlab.com/contactkrvineet/playwright-demo-test)
+**Repository:** [Playwright-BDD-Framework](https://gitlab.com/contactkrvineet/playwright-bdd-framework)
 
 ```bash
 # Clone the repository
-git clone https://gitlab.com/your-username/playwright-demo-test.git
-cd playwright-demo-test
+git clone https://gitlab.com/your-username/playwright-bdd-framework.git
+cd playwright-bdd-framework
 ```
 
 ---
@@ -96,8 +96,8 @@ Before you begin, ensure you have the following installed:
 **Step 1: Clone the Repository**
 
 ```bash
-git clone https://gitlab.com/your-username/playwright-demo-test.git
-cd playwright-demo-test
+git clone https://gitlab.com/your-username/playwright-bdd-framework.git
+cd playwright-bdd-framework
 ```
 
 **Step 2: Install Dependencies**
@@ -237,7 +237,7 @@ sequenceDiagram
 #### Directory Structure
 
 ```
-playwright-demo-test/
+playwright-bdd-framework/
 │
 ├── features/                        # BDD Test Features
 │   ├── sample.feature               # Gherkin scenarios
@@ -826,7 +826,7 @@ allure serve allure-results
 
 For issues, questions, or contributions:
 
-- **GitLab Repository:** [Your Repo Link](https://gitlab.com/your-username/playwright-demo-test)
+- **GitLab Repository:** [Your Repo Link](https://gitlab.com/your-username/playwright-bdd-framework)
 - **Report Issues:** Use GitLab Issues
 - **Pull Requests:** Welcome!
 

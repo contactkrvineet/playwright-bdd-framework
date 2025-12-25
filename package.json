@@ -1,5 +1,5 @@
 {
-  "name": "playwright-demo-test",
+  "name": "playwright-bdd-framework",
   "version": "1.0.0",
   "description": "Playwright framework with BDD and comprehensive reporting",
   "main": "index.js",

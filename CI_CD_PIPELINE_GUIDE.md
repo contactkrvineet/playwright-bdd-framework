@@ -35,12 +35,12 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 
 ### Artifacts Available
 
-| Artifact Name | Contains | Retention |
-|--------------|----------|-----------|
-| `playwright-report` | Native Playwright HTML report | 30 days |
-| `cucumber-reports` | All Cucumber reports (HTML, JSON, JUnit) | 30 days |
-| `allure-report` | Allure HTML report | 30 days |
-| `test-screenshots` | Screenshots from failed tests | 7 days |
+| Artifact Name       | Contains                                 | Retention |
+| ------------------- | ---------------------------------------- | --------- |
+| `playwright-report` | Native Playwright HTML report            | 30 days   |
+| `cucumber-reports`  | All Cucumber reports (HTML, JSON, JUnit) | 30 days   |
+| `allure-report`     | Allure HTML report                       | 30 days   |
+| `test-screenshots`  | Screenshots from failed tests            | 7 days    |
 
 ### How to View Reports
 
@@ -61,6 +61,7 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 #### Stage 1: Test (Parallel Execution)
 
 **Job 1: `playwright_tests`**
+
 ```bash
 - Run Playwright tests
 - Generate Playwright HTML report
@@ -68,6 +69,7 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 ```
 
 **Job 2: `bdd_tests`**
+
 ```bash
 - Run BDD Cucumber tests
 - Generate JSON, JUnit reports
@@ -76,6 +78,7 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 ```
 
 **Job 3: `smoke_tests`** (Manual/MR only)
+
 ```bash
 - Run @smoke tagged tests only
 - Quick validation
@@ -84,6 +87,7 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 #### Stage 2: Report
 
 **Job: `generate_reports`**
+
 ```bash
 - Generate Cucumber HTML reports
 - Generate Allure report
@@ -91,6 +95,7 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 ```
 
 #### Alternative: `all_tests` (Manual)
+
 ```bash
 - Run everything in sequence
 - All tests + all reports
@@ -105,13 +110,13 @@ This framework includes CI/CD configurations for both **GitHub Actions** and **G
 
 ### Artifacts Available
 
-| Job | Artifacts | Retention |
-|-----|-----------|-----------|
-| `playwright_tests` | Playwright report, test-results | 7 days |
-| `bdd_tests` | Cucumber JSON, JUnit, screenshots | 7 days |
-| `generate_reports` | All HTML reports, Allure | 30 days |
-| `all_tests` | Complete test suite results | 30 days |
-| `smoke_tests` | Smoke test results | 3 days |
+| Job                | Artifacts                         | Retention |
+| ------------------ | --------------------------------- | --------- |
+| `playwright_tests` | Playwright report, test-results   | 7 days    |
+| `bdd_tests`        | Cucumber JSON, JUnit, screenshots | 7 days    |
+| `generate_reports` | All HTML reports, Allure          | 30 days   |
+| `all_tests`        | Complete test suite results       | 30 days   |
+| `smoke_tests`      | Smoke test results                | 3 days    |
 
 ### How to View Reports
 
@@ -185,9 +190,9 @@ Set in: **Settings → Secrets and variables → Actions**
 
 ```yaml
 # Optional environment variables
-HEADLESS: true              # Run browsers in headless mode
-SLOWMO: 0                   # Slow motion delay (ms)
-PARALLEL: 1                 # Parallel workers for BDD
+HEADLESS: true # Run browsers in headless mode
+SLOWMO: 0 # Slow motion delay (ms)
+PARALLEL: 1 # Parallel workers for BDD
 ```
 
 ### GitLab CI
@@ -233,7 +238,7 @@ regression_tests:
   script:
     - npm run test:regression
   only:
-    - schedules  # Run on scheduled pipelines
+    - schedules # Run on scheduled pipelines
 ```
 
 ---
@@ -271,14 +276,14 @@ open reports/index.html      # Reports dashboard
 
 ## 🚀 Quick Reference
 
-| What You Need | GitHub Actions | GitLab CI |
-|--------------|----------------|-----------|
+| What You Need          | GitHub Actions                        | GitLab CI                           |
+| ---------------------- | ------------------------------------- | ----------------------------------- |
 | View Playwright Report | Download `playwright-report` artifact | Browse `playwright_tests` artifacts |
-| View Cucumber Reports | Download `cucumber-reports` artifact | Browse `generate_reports` artifacts |
-| View Allure Report | Download `allure-report` artifact | Browse `generate_reports` artifacts |
-| View Screenshots | Download `test-screenshots` artifact | Browse `bdd_tests` artifacts |
-| Run Smoke Tests Only | Modify workflow | Already configured |
-| Run Full Suite | Automatic on push | Use `all_tests` manual job |
+| View Cucumber Reports  | Download `cucumber-reports` artifact  | Browse `generate_reports` artifacts |
+| View Allure Report     | Download `allure-report` artifact     | Browse `generate_reports` artifacts |
+| View Screenshots       | Download `test-screenshots` artifact  | Browse `bdd_tests` artifacts        |
+| Run Smoke Tests Only   | Modify workflow                       | Already configured                  |
+| Run Full Suite         | Automatic on push                     | Use `all_tests` manual job          |
 
 ---
 
@@ -301,6 +306,7 @@ Before pushing to CI:
 **Issue**: Tests fail in CI but pass locally
 
 **Solution**:
+
 ```yaml
 # Add debug step
 - name: Debug Environment
@@ -319,6 +325,7 @@ Before pushing to CI:
 **Issue**: Pipeline stuck or slow
 
 **Solution**:
+
 ```yaml
 # Enable caching
 cache:
@@ -331,6 +338,7 @@ cache:
 **Issue**: Artifacts too large
 
 **Solution**: Reduce retention or exclude unnecessary files:
+
 ```yaml
 artifacts:
   expire_in: 3 days

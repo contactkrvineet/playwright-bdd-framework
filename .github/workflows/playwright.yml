@@ -10,36 +10,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      
+
       - name: Install Allure CLI
         run: npm install -g allure-commandline
-      
+
       - name: Run Playwright tests
         run: npm run test:playwright
         continue-on-error: true
-      
+
       - name: Run BDD Cucumber tests
         run: npm run test:bdd
         continue-on-error: true
-      
+
       - name: Generate Cucumber Reports
         if: always()
         run: npm run reports:generate
-      
+
       - name: Generate Allure Report
         if: always()
         run: npm run allure:generate
-      
+
       - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
@@ -47,7 +47,7 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-      
+
       - name: Upload Cucumber HTML Reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -55,7 +55,7 @@ jobs:
           name: cucumber-reports
           path: reports/
           retention-days: 30
-      
+
       - name: Upload Allure Report
         if: always()
         uses: actions/upload-artifact@v4
@@ -63,7 +63,7 @@ jobs:
           name: allure-report
           path: allure-report/
           retention-days: 30
-      
+
       - name: Upload Test Screenshots
         if: failure()
         uses: actions/upload-artifact@v4

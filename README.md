@@ -1,4 +1,4 @@
-# Playwright BDD Test Automation Framework
+# Playwright BDD Framework
 
 A comprehensive test automation framework combining Playwright with BDD (Cucumber) and multiple reporting options including Allure, Cucumber HTML reports, and native Playwright reports.
 
@@ -26,7 +26,7 @@ A comprehensive test automation framework combining Playwright with BDD (Cucumbe
 ## 📁 Framework Structure
 
 ```
-playwright-demo-test/
+playwright-bdd-framework/
 │
 ├── .github/
 │   └── workflows/
@@ -97,17 +97,20 @@ npx playwright install --with-deps
 ### ⚡ Quick Start (One-Liner)
 
 **Run all tests and generate all reports:**
+
 ```bash
 npm run test:all:complete && npm run allure:open
 ```
 
 This will:
+
 - ✅ Run Playwright tests
 - ✅ Run BDD Cucumber tests
 - ✅ Generate all reports (Cucumber HTML, Allure, JUnit)
 - ✅ Open Allure report in browser
 
 **Alternative (BDD only with reports):**
+
 ```bash
 npm run test:all && npm run allure:open
 ```
