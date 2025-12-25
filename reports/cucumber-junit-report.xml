@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="2.09" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-25T13:47:25.697Z">
+  <testcase classname="Sample BDD Test with Playwright" name="Verify vineet website title" time="0.901">
+    <system-out><![CDATA[Given I navigate to "https://www.vineetkr.com"..............................passed
+When I wait for the page to load............................................passed
+Then the page title should contain "Technology Portfolio"...................passed]]></system-out>
+  </testcase>
+  <testcase classname="Sample BDD Test with Playwright" name="Verify vineet website   link" time="0.704">
+    <system-out><![CDATA[Given I navigate to "https://www.vineetkr.com"..............................passed
+When I click on the "About Me" link.........................................passed
+Then I should see the documentation page....................................passed
+And the URL should contain "about"..........................................passed]]></system-out>
+  </testcase>
+</testsuite>

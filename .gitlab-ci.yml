@@ -1,0 +1,99 @@
+image: mcr.microsoft.com/playwright:v1.40.0-jammy
+
+stages:
+  - test
+  - report
+
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  PLAYWRIGHT_BROWSERS_PATH: 0
+
+cache:
+  paths:
+    - .npm/
+    - node_modules/
+
+before_script:
+  - npm ci
+
+# Run Playwright Tests
+playwright_tests:
+  stage: test
+  script:
+    - npm run test:playwright
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+      - test-results/
+    expire_in: 1 week
+  allow_failure: true
+
+# Run BDD Cucumber Tests
+bdd_tests:
+  stage: test
+  script:
+    - npm run test:bdd
+  artifacts:
+    when: always
+    paths:
+      - reports/cucumber-report.json
+      - reports/cucumber-junit-report.xml
+      - allure-results/
+      - test-results/screenshots/
+    expire_in: 1 week
+  allow_failure: true
+
+# Generate All Reports
+generate_reports:
+  stage: report
+  dependencies:
+    - bdd_tests
+  script:
+    - npm run reports:generate
+    - npm install -g allure-commandline
+    - npm run allure:generate
+  artifacts:
+    when: always
+    paths:
+      - reports/
+      - allure-report/
+    expire_in: 1 month
+  needs:
+    - job: bdd_tests
+      artifacts: true
+
+# Combined Test Job (Alternative - runs everything in sequence)
+all_tests:
+  stage: test
+  script:
+    - npm run test:playwright || true
+    - npm run test:bdd
+    - npm run reports:generate
+    - npm install -g allure-commandline
+    - npm run allure:generate
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+      - reports/
+      - allure-report/
+      - test-results/
+    expire_in: 1 month
+  when: manual
+  allow_failure: true
+
+# Smoke Tests Only (for quick validation)
+smoke_tests:
+  stage: test
+  script:
+    - npm run test:smoke
+  artifacts:
+    when: always
+    paths:
+      - reports/
+      - allure-results/
+    expire_in: 3 days
+  only:
+    - merge_requests
+  allow_failure: true

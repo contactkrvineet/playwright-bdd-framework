@@ -1,0 +1,172 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "sample-bdd-test-with-playwright;verify-vineet-website-title",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Verify vineet website title",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 235954750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to \"https://www.vineetkr.com\"",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156899709
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I wait for the page to load",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 491745083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the page title should contain \"Technology Portfolio\"",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9375583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5657374
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 4
+          },
+          {
+            "name": "@regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sample-bdd-test-with-playwright;verify-vineet-website---link",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Verify vineet website   link",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50345417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I navigate to \"https://www.vineetkr.com\"",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56027541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on the \"About Me\" link",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89266417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see the documentation page",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 502814833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the URL should contain \"about\"",
+            "match": {
+              "location": "features/step_definitions/sample.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 690999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3240667
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sample-bdd-test-with-playwright",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Sample BDD Test with Playwright",
+    "tags": [],
+    "uri": "features/sample.feature"
+  }
+]

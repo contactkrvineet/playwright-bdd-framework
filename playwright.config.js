@@ -44,7 +44,16 @@ export default defineConfig({
 
     /* Run tests in headed mode */
     headless: true,
+
+    /* Maximum time each action can take */
+    actionTimeout: 30000,
+
+    /* Maximum navigation time */
+    navigationTimeout: 30000,
   },
+
+  /* Maximum time one test can run */
+  timeout: 60000,
 
   /* Configure projects for major browsers */
   projects: [

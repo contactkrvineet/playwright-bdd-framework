@@ -1,0 +1,51 @@
+{
+  "cucumberautocomplete.steps": [
+    "features/step_definitions/**/*.js"
+  ],
+  "cucumberautocomplete.syncfeatures": "features/**/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": false,
+  "cucumberautocomplete.strictGherkinValidation": false,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": true,
+  "cucumberautocomplete.customParameters": [
+    {
+      "parameter": "{string}",
+      "value": "\"([^\"]*)\""
+    },
+    {
+      "parameter": "{int}",
+      "value": "(\\d+)"
+    }
+  ],
+  "cucumberautocomplete.formatConfOverride": {
+    "And": 3,
+    "But": 3,
+    "Scenario": 1,
+    "Given": 3,
+    "Then": 3,
+    "When": 3
+  },
+  "cucumberautocomplete.onTypeFormat": true,
+  "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And|But)\\(",
+  "cucumberautocomplete.stepRegExSymbol": "\"",
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  },
+  "[feature]": {
+    "editor.defaultFormatter": "alexkrechik.cucumberautocomplete",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+}
+
