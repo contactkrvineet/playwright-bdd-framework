@@ -18,8 +18,11 @@
     "test:all:complete": "npm run test:playwright && npm run test:bdd && npm run reports:generate && npm run allure:generate",
     "reports:generate": "node generate-all-reports.js",
     "reports:open": "open reports/cucumber-html-report.html",
+    "reports:serve": "npx http-server reports -p 8080 -o",
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report",
+    "allure:serve": "npx http-server allure-report -p 8081 -o",
+    "serve:all": "npm run reports:generate && npm run allure:generate && echo 'Reports: http://localhost:8080 | Allure: http://localhost:8081' && npx concurrently \"npx http-server reports -p 8080\" \"npx http-server allure-report -p 8081\"",
     "test:all": "npm run test:bdd && npm run reports:generate && npm run allure:generate",
     "clean": "rm -rf reports/* allure-results/* allure-report/* playwright-report/*",
     "pretest": "npm run clean"

@@ -1,9 +1,9 @@
 name: Playwright + BDD Tests
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, prac]
   pull_request:
-    branches: [main, master]
+    branches: [main, master, prac]
 
 permissions:
   contents: read
@@ -215,6 +215,6 @@ jobs:
           path: public
 
       - name: Deploy to GitHub Pages
-        if: always() && github.ref == 'refs/heads/main'
+        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/prac')
         uses: actions/deploy-pages@v4
         id: deployment
