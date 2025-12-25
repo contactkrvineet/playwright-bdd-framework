@@ -21,13 +21,15 @@ report.generate({
   customData: {
     title: "Run Information",
     data: [
-      { label: "Project", value: "Playwright Demo Test" },
+      { label: "Project", value: "Playwright BDD Framework" },
       { label: "Release", value: "1.0.0" },
       { label: "Cycle", value: "Regression" },
       { label: "Execution Start Time", value: new Date().toISOString() },
       { label: "Execution End Time", value: new Date().toISOString() },
+      { label: "Author", value: "Vineet Kumar" },
     ],
   },
+  pageFooter: "<div style='text-align:center; padding:10px;'>Maintained by <strong>Vineet Kumar</strong> | <a href='https://github.com/contactkrvineet/playwright-bdd-framework' target='_blank'>View on GitHub</a></div>",
 });
 
 console.log("✅ Cucumber HTML report generated successfully!");

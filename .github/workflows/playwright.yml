@@ -200,7 +200,8 @@ jobs:
               </div>
 
               <div class="footer">
-                <p>Authored by <span class="author">Vineet Kumar</span></p>
+                <p>Maintained by <span class="author">Vineet Kumar</span></p>
+                <p><a href="https://github.com/contactkrvineet/playwright-bdd-framework" target="_blank" style="color: #ffd700; text-decoration: none; border-bottom: 1px solid #ffd700;">🔗 View on GitHub</a></p>
               </div>
             </div>
           </body>

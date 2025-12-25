@@ -15,6 +15,7 @@ const options = {
     Platform: process.platform,
     Parallel: "Scenarios",
     Executed: "Local",
+    "Maintained by": "Vineet Kumar",
   },
   failedSummaryReport: true,
   brandTitle: "Playwright BDD Test Report",
