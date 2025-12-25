@@ -2,6 +2,8 @@
 
 A comprehensive test automation framework combining Playwright with BDD (Cucumber) and multiple reporting options including Allure, Cucumber HTML reports, and native Playwright reports.
 
+**🔗 [View Live Sample Reports](https://contactkrvineet.github.io/playwright-bdd-framework/reports/index.html)**
+
 ## 📋 Table of Contents
 
 - [Framework Features](#framework-features)
