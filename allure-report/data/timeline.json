@@ -1,0 +1,152 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Vineets-MacBook-Pro.local",
+    "children" : [ {
+      "name" : "pid-32618-worker-1",
+      "children" : [ {
+        "name" : "main navigation",
+        "uid" : "81762aa255cc45c9",
+        "parentUid" : "2ff0c9575cd812ab75dcbd37039bd5e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621616254,
+          "stop" : 1766621617460,
+          "duration" : 1206
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "2ff0c9575cd812ab75dcbd37039bd5e3"
+    }, {
+      "name" : "pid-47327-worker-0",
+      "children" : [ {
+        "name" : "main navigation",
+        "uid" : "fc81fbeeb5243939",
+        "parentUid" : "8c4bc182cfe2dd2a05acbdd0549a92c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766625827604,
+          "stop" : 1766625828646,
+          "duration" : 1042
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "8c4bc182cfe2dd2a05acbdd0549a92c7"
+    }, {
+      "name" : "pid-32618-worker-4",
+      "children" : [ {
+        "name" : "has title",
+        "uid" : "b215053cb0874d23",
+        "parentUid" : "94ab5a44b678f92f3955ffc94cbe3cbf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621616246,
+          "stop" : 1766621618420,
+          "duration" : 2174
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "webkit" ]
+      } ],
+      "uid" : "94ab5a44b678f92f3955ffc94cbe3cbf"
+    }, {
+      "name" : "pid-32618-worker-3",
+      "children" : [ {
+        "name" : "main navigation",
+        "uid" : "c3897a9890b2418d",
+        "parentUid" : "ed4be36b9448ae43927c6de51da83aad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621616267,
+          "stop" : 1766621617741,
+          "duration" : 1474
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "firefox" ]
+      } ],
+      "uid" : "ed4be36b9448ae43927c6de51da83aad"
+    }, {
+      "name" : "pid-32618-worker-2",
+      "children" : [ {
+        "name" : "has title",
+        "uid" : "7eb262994578450",
+        "parentUid" : "59319767bac2f3c7c40bac28678d737b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621616245,
+          "stop" : 1766621618421,
+          "duration" : 2176
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "firefox" ]
+      } ],
+      "uid" : "59319767bac2f3c7c40bac28678d737b"
+    }, {
+      "name" : "pid-32618-worker-0",
+      "children" : [ {
+        "name" : "has title",
+        "uid" : "c58fbb6ceb80cc01",
+        "parentUid" : "38b8a99a86683ada8b8b5cb7aac4166c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621616244,
+          "stop" : 1766621617426,
+          "duration" : 1182
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      }, {
+        "name" : "main navigation",
+        "uid" : "dfe1cc4fcb95bc2f",
+        "parentUid" : "38b8a99a86683ada8b8b5cb7aac4166c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621620454,
+          "stop" : 1766621621022,
+          "duration" : 568
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "webkit" ]
+      } ],
+      "uid" : "38b8a99a86683ada8b8b5cb7aac4166c"
+    } ],
+    "uid" : "c60359466ed0ac01834f8c777c51dcd4"
+  } ]
+}

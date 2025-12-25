@@ -1,0 +1,131 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "chromium",
+    "children" : [ {
+      "name" : "has title",
+      "uid" : "c58fbb6ceb80cc01",
+      "parentUid" : "36c900977e1d8b81a2c6893cc82bfc01",
+      "status" : "passed",
+      "time" : {
+        "start" : 1766621616244,
+        "stop" : 1766621617426,
+        "duration" : 1182
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chromium" ]
+    }, {
+      "name" : "navigation",
+      "children" : [ {
+        "name" : "main navigation",
+        "uid" : "fc81fbeeb5243939",
+        "parentUid" : "050094830a0515c1d64d6b3c1ee147d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766625827604,
+          "stop" : 1766625828646,
+          "duration" : 1042
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chromium" ]
+      } ],
+      "uid" : "050094830a0515c1d64d6b3c1ee147d6"
+    } ],
+    "uid" : "36c900977e1d8b81a2c6893cc82bfc01"
+  }, {
+    "name" : "firefox",
+    "children" : [ {
+      "name" : "has title",
+      "uid" : "7eb262994578450",
+      "parentUid" : "ed39c131db56604842b18253a0c76267",
+      "status" : "passed",
+      "time" : {
+        "start" : 1766621616245,
+        "stop" : 1766621618421,
+        "duration" : 2176
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox" ]
+    }, {
+      "name" : "navigation",
+      "children" : [ {
+        "name" : "main navigation",
+        "uid" : "c3897a9890b2418d",
+        "parentUid" : "2426cdccd66540066570334b48abb69c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621616267,
+          "stop" : 1766621617741,
+          "duration" : 1474
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "firefox" ]
+      } ],
+      "uid" : "2426cdccd66540066570334b48abb69c"
+    } ],
+    "uid" : "ed39c131db56604842b18253a0c76267"
+  }, {
+    "name" : "webkit",
+    "children" : [ {
+      "name" : "has title",
+      "uid" : "b215053cb0874d23",
+      "parentUid" : "44063b3706d66b0d346705a4a77c6704",
+      "status" : "passed",
+      "time" : {
+        "start" : 1766621616246,
+        "stop" : 1766621618420,
+        "duration" : 2174
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "webkit" ]
+    }, {
+      "name" : "navigation",
+      "children" : [ {
+        "name" : "main navigation",
+        "uid" : "dfe1cc4fcb95bc2f",
+        "parentUid" : "fb5d92b7fbf5fad9bef3fb28b1c56fdc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1766621620454,
+          "stop" : 1766621621022,
+          "duration" : 568
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "webkit" ]
+      } ],
+      "uid" : "fb5d92b7fbf5fad9bef3fb28b1c56fdc"
+    } ],
+    "uid" : "44063b3706d66b0d346705a4a77c6704"
+  } ]
+}

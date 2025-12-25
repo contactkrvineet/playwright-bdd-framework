@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 24 19:13:36 EST 2025","Wed Dec 24 19:13:37 EST 2025","1182","chromium","","","","","has title",""
+"passed","Wed Dec 24 19:13:36 EST 2025","Wed Dec 24 19:13:38 EST 2025","2174","webkit","","","","","has title",""
+"passed","Wed Dec 24 19:13:40 EST 2025","Wed Dec 24 19:13:41 EST 2025","568","webkit","","navigation","","","main navigation",""
+"passed","Wed Dec 24 19:13:36 EST 2025","Wed Dec 24 19:13:38 EST 2025","2176","firefox","","","","","has title",""
+"passed","Wed Dec 24 20:23:47 EST 2025","Wed Dec 24 20:23:48 EST 2025","1042","chromium","","navigation","","","main navigation",""
+"passed","Wed Dec 24 19:13:36 EST 2025","Wed Dec 24 19:13:37 EST 2025","1474","firefox","","navigation","","","main navigation",""
