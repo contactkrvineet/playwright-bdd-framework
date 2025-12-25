@@ -449,7 +449,7 @@ npm run test:all:complete
 
 This framework generates multiple types of reports for comprehensive test visibility.
 
-**🔗 Live Demo:** [View Sample Reports Dashboard](https://contactkrvineet.github.io/playwright-bdd-framework/reports/index.html)
+**🔗 Live Demo:** [View Sample Reports Dashboard](https://contactkrvineet.github.io/playwright-bdd-framework)
 
 #### Cucumber Reports
 
